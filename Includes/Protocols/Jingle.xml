@@ -1,0 +1,431 @@
+<protocol name="Jingle Session" medium="" capacity="">
+  <messages>
+     <message>Aack</message>
+     <message>Asessioninit</message>
+     <message>Asessionterminate</message>
+     <message>Atransportinfo</message>
+     <message>Back</message>
+     <message>Bsessionaccept</message>
+     <message>Btransportinfo</message>
+  </messages>
+  <channels>
+     <channel>c1</channel>
+     <channel>c2</channel>
+  </channels>
+
+  <role name="A">
+    <states>
+      <state type="initial">A1A</state>
+      <state>A2A</state>
+      <state>A3A</state>
+      <state>A4A</state>
+      <state>A5A</state>
+      <state>A6A</state>
+      <state>A7A</state>
+      <state>A8A</state>
+      <state>A9A</state>
+      <state>A10A</state>
+      <state>Invalid</state>
+    </states>
+    <rule id="A1A__Asessioninit__OUTBOUND">
+      <pre>
+        <current_state>A1A</current_state>
+      </pre>
+      <post>
+        <send_message>Asessioninit</send_message>
+        <next_state>A2A</next_state>
+        <channel>c1</channel>
+      </post>
+    </rule>
+
+    <rule id="A2A__Back__INBOUND">
+      <pre>
+        <current_state>A2A</current_state>
+        <received_message>Back</received_message>
+        <channel>c2</channel>
+      </pre>
+      <post>
+        <next_state>A3A</next_state>
+      </post>
+    </rule>
+
+    <rule id="A4A__Back__INBOUND">
+      <pre>
+        <current_state>A4A</current_state>
+        <received_message>Back</received_message>
+        <channel>c2</channel>
+      </pre>
+      <post>
+        <next_state>A5A</next_state>
+      </post>
+    </rule>
+
+    <rule id="A10A__Back__INBOUND">
+      <pre>
+        <current_state>A10A</current_state>
+        <received_message>Back</received_message>
+        <channel>c2</channel>
+      </pre>
+      <post>
+        <next_state>A1A</next_state>
+      </post>
+    </rule>
+
+    <rule id="A3A__Atransportinfo__OUTBOUND">
+      <pre>
+        <current_state>A3A</current_state>
+      </pre>
+      <post>
+        <send_message>Atransportinfo</send_message>
+        <next_state>A4A</next_state>
+        <channel>c1</channel>
+      </post>
+    </rule>
+
+    <rule id="A5A__Btransportinfo__INBOUND">
+      <pre>
+        <current_state>A5A</current_state>
+        <received_message>Btransportinfo</received_message>
+        <channel>c2</channel>
+      </pre>
+      <post>
+        <next_state>A6A</next_state>
+      </post>
+    </rule>
+
+    <rule id="A6A__Aack__OUTBOUND">
+      <pre>
+        <current_state>A6A</current_state>
+      </pre>
+      <post>
+        <send_message>Aack</send_message>
+        <next_state>A7A</next_state>
+        <channel>c1</channel>
+      </post>
+    </rule>
+
+    <rule id="A8A__Aack__OUTBOUND">
+      <pre>
+        <current_state>A8A</current_state>
+      </pre>
+      <post>
+        <send_message>Aack</send_message>
+        <next_state>A9A</next_state>
+        <channel>c1</channel>
+      </post>
+    </rule>
+
+    <rule id="A7A__Bsessionaccept__INBOUND">
+      <pre>
+        <current_state>A7A</current_state>
+        <received_message>Bsessionaccept</received_message>
+        <channel>c2</channel>
+      </pre>
+      <post>
+        <next_state>A8A</next_state>
+      </post>
+    </rule>
+
+    <rule id="A9A__Asessionterminate__OUTBOUND">
+      <pre>
+        <current_state>A9A</current_state>
+      </pre>
+      <post>
+        <send_message>Asessionterminate</send_message>
+        <next_state>A10A</next_state>
+        <channel>c1</channel>
+      </post>
+    </rule>
+
+  </role>
+  <role name="B">
+    <states>
+      <state type="initial">B1B</state>
+      <state>B2B</state>
+      <state>B3B</state>
+      <state>B4B</state>
+      <state>B5B</state>
+      <state>B6B</state>
+      <state>B7B</state>
+      <state>B8B</state>
+      <state>B9B</state>
+      <state>B10B</state>
+      <state>Invalid</state>
+    </states>
+    <rule id="B1B__Asessioninit__INBOUND">
+      <pre>
+        <current_state>B1B</current_state>
+        <received_message>Asessioninit</received_message>
+        <channel>c1</channel>
+      </pre>
+      <post>
+        <next_state>B2B</next_state>
+      </post>
+    </rule>
+
+    <rule id="B3B__Asessioninit__INBOUND">
+      <pre>
+        <current_state>B3B</current_state>
+        <received_message>Asessioninit</received_message>
+        <channel>c1</channel>
+      </pre>
+      <post>
+        <next_state>Invalid</next_state>
+      </post>
+    </rule>
+
+    <rule id="B6B__Asessioninit__INBOUND">
+      <pre>
+        <current_state>B6B</current_state>
+        <received_message>Asessioninit</received_message>
+        <channel>c1</channel>
+      </pre>
+      <post>
+        <next_state>Invalid</next_state>
+      </post>
+    </rule>
+
+    <rule id="B8B__Asessioninit__INBOUND">
+      <pre>
+        <current_state>B8B</current_state>
+        <received_message>Asessioninit</received_message>
+        <channel>c1</channel>
+      </pre>
+      <post>
+        <next_state>Invalid</next_state>
+      </post>
+    </rule>
+
+    <rule id="B9B__Asessioninit__INBOUND">
+      <pre>
+        <current_state>B9B</current_state>
+        <received_message>Asessioninit</received_message>
+        <channel>c1</channel>
+      </pre>
+      <post>
+        <next_state>Invalid</next_state>
+      </post>
+    </rule>
+
+    <rule id="B2B__Back__OUTBOUND">
+      <pre>
+        <current_state>B2B</current_state>
+      </pre>
+      <post>
+        <send_message>Back</send_message>
+        <next_state>B3B</next_state>
+        <channel>c2</channel>
+      </post>
+    </rule>
+
+    <rule id="B4B__Back__OUTBOUND">
+      <pre>
+        <current_state>B4B</current_state>
+      </pre>
+      <post>
+        <send_message>Back</send_message>
+        <next_state>B5B</next_state>
+        <channel>c2</channel>
+      </post>
+    </rule>
+
+    <rule id="B10B__Back__OUTBOUND">
+      <pre>
+        <current_state>B10B</current_state>
+      </pre>
+      <post>
+        <send_message>Back</send_message>
+        <next_state>B1B</next_state>
+        <channel>c2</channel>
+      </post>
+    </rule>
+
+    <rule id="B1B__Atransportinfo__INBOUND">
+      <pre>
+        <current_state>B1B</current_state>
+        <received_message>Atransportinfo</received_message>
+        <channel>c1</channel>
+      </pre>
+      <post>
+        <next_state>Invalid</next_state>
+      </post>
+    </rule>
+
+    <rule id="B3B__Atransportinfo__INBOUND">
+      <pre>
+        <current_state>B3B</current_state>
+        <received_message>Atransportinfo</received_message>
+        <channel>c1</channel>
+      </pre>
+      <post>
+        <next_state>B4B</next_state>
+      </post>
+    </rule>
+
+    <rule id="B6B__Atransportinfo__INBOUND">
+      <pre>
+        <current_state>B6B</current_state>
+        <received_message>Atransportinfo</received_message>
+        <channel>c1</channel>
+      </pre>
+      <post>
+        <next_state>Invalid</next_state>
+      </post>
+    </rule>
+
+    <rule id="B8B__Atransportinfo__INBOUND">
+      <pre>
+        <current_state>B8B</current_state>
+        <received_message>Atransportinfo</received_message>
+        <channel>c1</channel>
+      </pre>
+      <post>
+        <next_state>Invalid</next_state>
+      </post>
+    </rule>
+
+    <rule id="B9B__Atransportinfo__INBOUND">
+      <pre>
+        <current_state>B9B</current_state>
+        <received_message>Atransportinfo</received_message>
+        <channel>c1</channel>
+      </pre>
+      <post>
+        <next_state>Invalid</next_state>
+      </post>
+    </rule>
+
+    <rule id="B5B__Btransportinfo__OUTBOUND">
+      <pre>
+        <current_state>B5B</current_state>
+      </pre>
+      <post>
+        <send_message>Btransportinfo</send_message>
+        <next_state>B6B</next_state>
+        <channel>c2</channel>
+      </post>
+    </rule>
+
+    <rule id="B1B__Aack__INBOUND">
+      <pre>
+        <current_state>B1B</current_state>
+        <received_message>Aack</received_message>
+        <channel>c1</channel>
+      </pre>
+      <post>
+        <next_state>Invalid</next_state>
+      </post>
+    </rule>
+
+    <rule id="B3B__Aack__INBOUND">
+      <pre>
+        <current_state>B3B</current_state>
+        <received_message>Aack</received_message>
+        <channel>c1</channel>
+      </pre>
+      <post>
+        <next_state>Invalid</next_state>
+      </post>
+    </rule>
+
+    <rule id="B6B__Aack__INBOUND">
+      <pre>
+        <current_state>B6B</current_state>
+        <received_message>Aack</received_message>
+        <channel>c1</channel>
+      </pre>
+      <post>
+        <next_state>B7B</next_state>
+      </post>
+    </rule>
+
+    <rule id="B8B__Aack__INBOUND">
+      <pre>
+        <current_state>B8B</current_state>
+        <received_message>Aack</received_message>
+        <channel>c1</channel>
+      </pre>
+      <post>
+        <next_state>B9B</next_state>
+      </post>
+    </rule>
+
+    <rule id="B9B__Aack__INBOUND">
+      <pre>
+        <current_state>B9B</current_state>
+        <received_message>Aack</received_message>
+        <channel>c1</channel>
+      </pre>
+      <post>
+        <next_state>Invalid</next_state>
+      </post>
+    </rule>
+
+    <rule id="B7B__Bsessionaccept__OUTBOUND">
+      <pre>
+        <current_state>B7B</current_state>
+      </pre>
+      <post>
+        <send_message>Bsessionaccept</send_message>
+        <next_state>B8B</next_state>
+        <channel>c2</channel>
+      </post>
+    </rule>
+
+    <rule id="B1B__Asessionterminate__INBOUND">
+      <pre>
+        <current_state>B1B</current_state>
+        <received_message>Asessionterminate</received_message>
+        <channel>c1</channel>
+      </pre>
+      <post>
+        <next_state>Invalid</next_state>
+      </post>
+    </rule>
+
+    <rule id="B3B__Asessionterminate__INBOUND">
+      <pre>
+        <current_state>B3B</current_state>
+        <received_message>Asessionterminate</received_message>
+        <channel>c1</channel>
+      </pre>
+      <post>
+        <next_state>Invalid</next_state>
+      </post>
+    </rule>
+
+    <rule id="B6B__Asessionterminate__INBOUND">
+      <pre>
+        <current_state>B6B</current_state>
+        <received_message>Asessionterminate</received_message>
+        <channel>c1</channel>
+      </pre>
+      <post>
+        <next_state>Invalid</next_state>
+      </post>
+    </rule>
+
+    <rule id="B8B__Asessionterminate__INBOUND">
+      <pre>
+        <current_state>B8B</current_state>
+        <received_message>Asessionterminate</received_message>
+        <channel>c1</channel>
+      </pre>
+      <post>
+        <next_state>Invalid</next_state>
+      </post>
+    </rule>
+
+    <rule id="B9B__Asessionterminate__INBOUND">
+      <pre>
+        <current_state>B9B</current_state>
+        <received_message>Asessionterminate</received_message>
+        <channel>c1</channel>
+      </pre>
+      <post>
+        <next_state>B10B</next_state>
+      </post>
+    </rule>
+
+  </role>
+</protocol>

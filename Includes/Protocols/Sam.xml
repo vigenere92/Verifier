@@ -1,0 +1,38 @@
+<protocol name="Alternating Bit Protocol" medium="STUTT_FIFO" capacity="4">
+  <messages>
+     <message>ack0</message>
+  </messages>
+  <channels>
+     <channel>c1</channel>
+  </channels>
+
+  <role name="SENDER">
+    <states>
+      <state type="initial">Q1</state>
+      <state>Q2</state>
+    </states>
+
+
+    <rule id="Q1__mesg0__OUTBOUND">
+      <pre>
+        <current_state>Q1</current_state>
+      </pre>
+      <post>
+        <send_message>ack0</send_message>
+        <next_state>Q2</next_state>
+        <channel>c1</channel>
+      </post>
+    </rule>
+
+    <rule id="Q1__mesg0__OUTBOUND">
+      <pre>
+        <current_state>Q2</current_state>
+      </pre>
+      <post>
+        <send_message>ack0</send_message>
+        <next_state>Q2</next_state>
+        <channel>c1</channel>
+      </post>
+    </rule>
+   </role>
+ </protocol>

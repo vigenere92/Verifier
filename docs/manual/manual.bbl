@@ -1,0 +1,41 @@
+\begin{thebibliography}{1}
+
+\bibitem{AB93}
+P.A. Abdulla and B.~Jonsson.
+\newblock Verifying programs with unreliable channels.
+\newblock In {\em LICS}, 1993.
+
+\bibitem{AAC13}
+Parosh~Aziz Abdulla, Mohamed~Faouzi Atig, and Jonathan Cederberg.
+\newblock Analysis of message passing programs using smt-solvers.
+\newblock Uppsala University.
+
+\bibitem{AABJ04}
+Parosh~Aziz Abdulla, Aurore Collomb-Annichini, Ahmed Bouajjani, and Bengt
+  Jonsson.
+\newblock Using forward reachability analysis for verification of lossy channel
+  systems.
+\newblock In {\em FMSD}, page 25(1):39–65, 2004.
+
+\bibitem{JRSVgit}
+Abinoam P.~Marques Jr., Anders Ravn, Jiri Srba, and Sallem Vighio.
+\newblock csv2uppaal.
+\newblock https://github.com/csv2uppaal.
+
+\bibitem{MPSV11}
+Abinoam~P. Marques, Anders~Peter Ravn, Jiri Srba, and Saleem Vighio.
+\newblock Tool supported analysis of web services protocols.
+\newblock In {\em TTCS}, pages pages 50--64, University of Oslo, 2011.
+
+\bibitem{SJ05}
+S.~Qadeer and J~Rehof.
+\newblock Context-bounded model checking of concurrent software.
+\newblock In {\em TACAS}, 2005.
+
+\bibitem{RSV11}
+Anders~P. Ravn, Jiri Srba, and Saleem Vighio.
+\newblock Modelling and verification of web services business activity
+  protocol.
+\newblock In {\em TACAS}, LNCS, pages pages 357--571. Springer, 2011.
+
+\end{thebibliography}

@@ -1,0 +1,5 @@
+file /home/rator/Verifier/Includes/Protocols/ABP.xml
+semantics unordered
+bound 2
+bad RECEIVER Invalid
+channel_type process
