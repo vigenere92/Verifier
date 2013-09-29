@@ -12,11 +12,11 @@ engine.o: engine.cpp constraints_generation.hpp automata_using_lemon.hpp \
  /usr/include/c++/4.6/iosfwd /usr/include/c++/4.6/bits/stringfwd.h \
  /usr/include/c++/4.6/bits/postypes.h /usr/include/c++/4.6/cwchar \
  /usr/include/wchar.h /usr/include/stdio.h \
- /usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdarg.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6/include/stdarg.h \
  /usr/include/i386-linux-gnu/bits/wchar.h \
- /usr/lib/gcc/i686-linux-gnu/4.6.1/include/stddef.h \
- /usr/include/xlocale.h /usr/include/i386-linux-gnu/bits/wchar2.h \
- /usr/include/c++/4.6/exception /usr/include/c++/4.6/bits/exception_ptr.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6/include/stddef.h /usr/include/xlocale.h \
+ /usr/include/i386-linux-gnu/bits/wchar2.h /usr/include/c++/4.6/exception \
+ /usr/include/c++/4.6/bits/exception_ptr.h \
  /usr/include/c++/4.6/bits/exception_defines.h \
  /usr/include/c++/4.6/bits/nested_exception.h \
  /usr/include/c++/4.6/bits/char_traits.h \
@@ -32,7 +32,7 @@ engine.o: engine.cpp constraints_generation.hpp automata_using_lemon.hpp \
  /usr/include/c++/4.6/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.6/bits/stl_iterator.h \
  /usr/include/c++/4.6/debug/debug.h /usr/include/c++/4.6/cstdint \
- /usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdint.h /usr/include/stdint.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6/include/stdint.h /usr/include/stdint.h \
  /usr/include/c++/4.6/bits/localefwd.h \
  /usr/include/c++/4.6/i686-linux-gnu/./bits/c++locale.h \
  /usr/include/c++/4.6/clocale /usr/include/locale.h \
@@ -48,6 +48,7 @@ engine.o: engine.cpp constraints_generation.hpp automata_using_lemon.hpp \
  /usr/include/pthread.h /usr/include/sched.h /usr/include/time.h \
  /usr/include/i386-linux-gnu/bits/sched.h \
  /usr/include/i386-linux-gnu/bits/time.h \
+ /usr/include/i386-linux-gnu/bits/timex.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h /usr/include/unistd.h \
  /usr/include/i386-linux-gnu/bits/posix_opt.h \
@@ -74,6 +75,7 @@ engine.o: engine.cpp constraints_generation.hpp automata_using_lemon.hpp \
  /usr/include/i386-linux-gnu/sys/select.h \
  /usr/include/i386-linux-gnu/bits/select.h \
  /usr/include/i386-linux-gnu/bits/sigset.h \
+ /usr/include/i386-linux-gnu/bits/select2.h \
  /usr/include/i386-linux-gnu/sys/sysmacros.h /usr/include/alloca.h \
  /usr/include/i386-linux-gnu/bits/stdlib.h /usr/include/c++/4.6/cstdio \
  /usr/include/libio.h /usr/include/_G_config.h \
@@ -206,11 +208,11 @@ main_header.hpp:
 
 /usr/include/stdio.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdarg.h:
+/usr/lib/gcc/i686-linux-gnu/4.6/include/stdarg.h:
 
 /usr/include/i386-linux-gnu/bits/wchar.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6.1/include/stddef.h:
+/usr/lib/gcc/i686-linux-gnu/4.6/include/stddef.h:
 
 /usr/include/xlocale.h:
 
@@ -254,7 +256,7 @@ main_header.hpp:
 
 /usr/include/c++/4.6/cstdint:
 
-/usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdint.h:
+/usr/lib/gcc/i686-linux-gnu/4.6/include/stdint.h:
 
 /usr/include/stdint.h:
 
@@ -299,6 +301,8 @@ main_header.hpp:
 /usr/include/i386-linux-gnu/bits/sched.h:
 
 /usr/include/i386-linux-gnu/bits/time.h:
+
+/usr/include/i386-linux-gnu/bits/timex.h:
 
 /usr/include/i386-linux-gnu/bits/pthreadtypes.h:
 
@@ -361,6 +365,8 @@ main_header.hpp:
 /usr/include/i386-linux-gnu/bits/select.h:
 
 /usr/include/i386-linux-gnu/bits/sigset.h:
+
+/usr/include/i386-linux-gnu/bits/select2.h:
 
 /usr/include/i386-linux-gnu/sys/sysmacros.h:
 

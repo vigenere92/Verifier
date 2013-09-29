@@ -164,7 +164,7 @@ class Engine
             }
             else
             {
-                cout << endl << "Settings File not found" << endl;
+                cout << "Settings File not found" << endl << endl;
                 exit(0);
             }
         }
@@ -399,7 +399,7 @@ class Engine
             //Creating latex pdf containing result
             string result_path = homedir + (string)"/verifier_result/Result";
             int k = chdir(result_path.c_str());
-            FILE* pipe1 = popen("pdflatex main.tex > /dev/null","w");
+            FILE* pipe1 = popen("pdflatex result.tex > /dev/null","w");
             if(!pipe1)
                 cout << "\n ERROR";
             int l = chdir("../../");

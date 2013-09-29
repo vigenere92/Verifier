@@ -1,4 +1,4 @@
-file /home/gaurav/Verifier/Includes/Protocols/ABP.xml
+file /home/gaurav/Verifier/Includes/Protocols/BRP.xml
 semantics unordered
 bound 2
 bad RECEIVER Invalid
