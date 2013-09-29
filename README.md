@@ -20,4 +20,5 @@ $ ./configure
 $ make
 $ sudo make install
 
+
 For commands and options for running the verifier please refer to the manual.
